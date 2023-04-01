@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0px;
+    z-index: 999;
+}
+nav{
+    display: flex;
+    margin-top: 1em;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+nav > div > a > img{
+    width: 125px;
+    margin: auto;
+}
+nav > div{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+nav > div > img{
+    margin: 5px;
+    width: 24px;
+}
+.search-bar{
+    width: 398px;
+    height: 40px;
+    border: 1px solid #cbcbcb;
+    display: flex;
+    justify-content: space-between;  
+    background-color: #f8f8f8;  
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.search-bar:hover{
+    padding: 0px 10px;
+}
+
+.search-bar > input{
+    border: none;
+    outline: none;
+    background-color: #f8f8f8;  
+    width: 398px;
+    border-radius: 5px;
+    padding-left: 25px;
+    font-size: 16px;
+}
+.search-bar > img{
+    margin-right: 14px;
+}
+
+.login{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    width: 57px;
+    justify-content: space-between;    
+    /* text-decoration: none; */
+}
+#gg{
+    text-decoration: none;
+}
+.cart{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    /* background-color: green; */
+    /* width: 90px;  */
+    gap: 10px;
+    justify-content: space-around;
+    
+}
+#carr{
+    display: flex;
+    gap: 10px;
+    /* margin-right: 40px; */
+    text-decoration: none;
+}
+.cart p{
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.info{
+    display: flex;
+    font-size: 13px;
+    height: 26px;
+    align-items: center;
+    background-color: #eaeaea;
+    justify-content: flex-start;
+    gap: 3em;
+    width: 100%;
+}
+
+.info p:nth-child(1) {
+    margin-left: 20em;
+}
+
+.info p:nth-child(3) {
+    margin-left: 55em;
+}
+
+.info img{
+    width: 14px;
+}
+
+#links {
+    width: 70%;
+    text-align: center;
+    background-color: white;
+    background: white;
+    padding-bottom: 0.5em;
+    display: flex;
+}
+
+#links a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+main{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.mySwiper {
+    width: 70%;
+    margin: 13em auto 2em auto;
+}
+
+#card {
+    width: 100%;
+    justify-content: center;
+    gap:1em;
+}
+
+#card, .left, .right {
+    display: flex;
+}
+.left, .right {
+    margin: 1em 0 0.5em 0;
+    /* border: 5px solid black; */
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.left {
+    width: 35%;
+    padding: 3em 0 3em 3em;
+}
+.left img:last-child{
+    width:25%;
+    margin: auto;
+}
+.right {
+    width: 45%;
+    justify-content: flex-start;
+}
+
+.right h2 {
+    margin: 2em auto 1em 0.5em;
+}
+
+.right h4 {
+    margin: 0 auto 10em 1em;
+    color: grey;
+}
+
+.right p {
+    margin: 0 auto 0.25em 1em;
+    font-size: 2em;
+}
+
+.right h6 {
+    margin-left: 3em;
+    font-size: 0.75em;
+}
+
+.right > button {
+    background-color: black;
+    width: 80%;
+    height: 2em;
+    margin: auto;
+    border-radius: 0.5em;
+    color: white;
+    font-size: 2.5em;
+}
+
+.top {
+    width: 75%;
+    margin: auto;
+}
+
+.footUp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footUp > ul {
+    width: 100%;
+}
+
+.footUp > ul > li:first-child {
+    color: grey;
+    font-size: 1.15em;
+    font-weight: 50em;
+}
+
+.footDown {
+    margin: 3em;
+}
+
+.footDown > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footDown > div > div{
+    width: 33%;
+}
+
+.footDown > p {
+    margin-bottom: 1em;
+}
+
+#subs input {
+    width: 60%;
+    height: 50%;
+    margin: 0;
+}
+
+#subs button {
+    /* width: 40%; */
+    height: 50%;
+    color: white;
+    background-color: black;
+}
+
+.footDown  img{
+    width: 5%;
+}
+
+#app{
+    width: 30%;
+    text-align: center;
+}
+
+#app div {
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+}
+
+#app img{
+    width: 25%;
+}
+footer li{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#dropdown {
+    background-color: white;
+    width: 70%;
+    display: flex;
+    /* display: none; */
+    justify-content: space-around;
+}
+
+#dropdown li:first-child {
+    color: pink;
+    font-size: 1.15em;
+    font-weight: bolder;
+}
+
+#dropdown > ul > li, #dropdown > div > ul > li {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 7.5%;
+}
+
+#dropdown > ul > li > a, #dropdown > div > ul > li > a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 7.5%;
+}
+
+.makeup, .haircare, .skincare, .sanitizingcare, .rewards, .allureStudio {
+    display: none;
+}

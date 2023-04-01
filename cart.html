@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Cart</title>
+</head>
+<link rel="stylesheet" href="cart.css">
+<body>
+    <header>
+        <a href="index.html"><img src="./Images/Allure2.png" alt=""></a>
+        <div>
+            <div id="top">
+                <p>SHOPPING BAG</p>
+                <p>SELECT ADDRESS</p>
+                <p>CHECKOUT</p>
+                <p>PAYMENT</p>
+            </div>
+            <div class="container">
+                <div class="progress-container">
+                  <div class="progress" id="progress"> </div>
+                  <div class="circle active"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </div>
+        </div>
+        <a id="gg" href="./login.html"><div class="login">
+            <img src="./Images/profile_icon.svg" alt="" />
+            <p id="userD">Login</p>
+          </div></a>
+    </header>
+    <main>
+        <h2></h2>
+        <div id="bag">
+            <h3>Congrats! You're eligible for discount!</h3>
+            <div>
+                
+            </div>
+        </div>
+        <div id="grand">
+            <h2></h2>
+        </div>
+        <div id="address">
+            <h2>Add new Address</h2>
+            <input id="Address" type="text" required placeholder="Enter Location" />
+            <input type="text" placeholder="Flat no/ Building name/ Street name" />
+            <input type="text" placeholder="Landmark (optional)" />
+            <input type="text" placeholder="City" />
+            <input type="text" placeholder="Mobile Number" />
+            <input type="text" placeholder="Enter Email" />
+            <input type="text" placeholder="Enter Full name" />
+            <button id="enter">Save & Continue</button>
+        </div>
+        <div id="checkout">
+            <p>Order Summary</p>
+            <p><span>Actual Amount</span> <span id="actual"></span></p>
+            <p><span>Shipping Charges</span> <span id="shipping"></span></p>
+            <p><span>Discount</span> <span id="discount"></span></p>
+            <p><span>Amount to pay</span><span id="toPay"></span></p>
+            <p>Note:Inclusive of all taxes</p>
+            <!-- <p>Order Summary</p>
+            <p><span>Actual Amount</span> <span id="actual"></span></p>
+            <p><span>Shipping Charges</span> <span id="shipping"></span></p>
+            <p><span>Discount</span> <span id="discount"></span></p>
+            <p><span>Amount to pay</span><span id="toPay"></span></p>
+            <p>Note:Inclusive of all taxes</p> -->
+        </div>
+        <div id="payment">
+            <div class="left-nav">
+                <h2>Credit/Debit Card</h2>
+            </div>
+            <div class="right-page">
+                <div class="credit">
+                    <input type="text" placeholder="Enter card no.">
+                    <div class="more-details">
+                        <input type="text" placeholder="MM">
+                        <h3>/</h3>
+                        <input type="text" placeholder="YYYY">
+                        <input type="password" placeholder="Enter CVV">
+                    </div>
+                    <input type="text" placeholder="Name on Card">
+                </div>
+            </div>
+            <div class="totalamount">
+                <h2 >Total :- <span id="total-amount">0</span></h2>
+                <button id="pay">Place Order</button>
+            </div>
+        </div>
+        <button>SELECT ADDRESS</button>
+    </main>
+</body>
+<script src="cart.js"></script>
+</html>

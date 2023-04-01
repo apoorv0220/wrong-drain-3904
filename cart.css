@@ -1,0 +1,382 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background:white;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.progress-container::before {
+  content: "";
+  background: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  /* max-width: 100%; */
+  width: 100%;
+}
+
+.progress {
+  background: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: .4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0px;
+    padding-top: 1em;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+header > a {
+    width: 50%;
+}
+header > div {
+    width: 200%;
+}
+
+header a > img {
+    width:50%;
+}
+
+#top {
+    display: flex;
+    font-size: 0.75em;
+    justify-content: space-between;
+}
+
+main {
+    position: fixed;
+    top: 8em;
+    text-align: center;
+}
+
+main > h2 {
+    padding: 1em;
+}
+
+#bag {
+    width: 75%;
+    margin: auto;
+}
+
+#bag > h3 {
+    display: none;
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+}
+
+#bag > div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+#bag > div > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bag > div > div > img{
+    width: 10%;
+}
+
+#bag h5 {
+    width: 40%;
+}
+
+#bag p {
+    width: 5%;
+}
+
+#bag input {
+    width: 5%;
+}
+
+#grand {
+    background-color: lightgrey;
+    width: 100vw;
+    margin-top: 0.5em;
+}
+
+#grand > h2 {
+    padding: 0.75em;
+    margin-left: 45em;
+}
+
+main > button {
+    margin-top: 1em;
+background-color: black;
+color: white;
+font-size: 1.25em;
+width: 20em;
+height: 2.5em;
+}
+
+#address {
+    display: none;
+    height: 650px;
+    width: 400px;
+    margin: auto;
+    /* display: flex; */
+    flex-direction: column;
+    background-color: white;
+    border-radius: 9px;
+    text-align: center;
+    padding: 14px 40px;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    transition: 0.3s;
+   
+}
+#address > button{
+    height: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: lightgrey;
+    color: white;
+    border: none;
+    font-family: 'Lato';
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#address > button:hover{
+    background-color: lightgrey;
+    font-size: 19px;
+}
+#address > h2{
+    margin-bottom: 15px;
+}
+
+#address >input{
+    height: 34px;
+    margin-bottom: 30px;
+    width: 100%;
+    padding-left: 10px;
+    font-family: 'Lato';
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+#checkout {
+    display: none;
+    margin-top: 5em;
+    margin-right: 2.5em;
+    width: 250%;
+}
+
+#checkout > p{
+    display: flex;
+    width:50%;
+    justify-content: space-between;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+#checkout > p:last-child {
+    font-size: 1em;
+    color: red;
+    margin: 0;
+}
+
+.credit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.credit > input{
+    width: 75%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 70px;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.more-details{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.more-details > input{
+    width: 33.33%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 70px;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.more-details > h3{
+    margin-top: 30px;
+}
+.cod{
+    display: none;
+}
+
+#payment{
+    height: 400px;
+    width: 700px;
+    margin: auto;
+    background-color: white; 
+    border-radius: 13px;
+    overflow: hidden;
+    display: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.left-nav > h2:nth-child(1):hover{
+    padding: 15px;
+    background-color: lightgray;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    transition: 0.5s;
+}
+.left-nav > h2:nth-child(1){
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 15px;
+}
+
+#payment > .left-nav{
+    display: flex;
+    padding-left: 76px;
+    height: 15%;
+    background-color: grey;
+    color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.right-page{
+    height: 70%;
+    border: 1px solid transparent;
+}
+.totalamount{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    background-color: grey;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.totalamount > button{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    color: lightgray;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 7px;
+}
